@@ -1,6 +1,6 @@
 namespace WebApplication1;
 
-public class WeatherForecast
+public class Warehouse
 {
     public DateTime Date { get; set; }
 
