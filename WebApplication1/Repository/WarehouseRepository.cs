@@ -1,6 +1,6 @@
 namespace WebApplication1.Repository;
 
-public class WarehouseRepository
+public class WarehouseRepository : IWarehouseRepository
 {
     
 }
