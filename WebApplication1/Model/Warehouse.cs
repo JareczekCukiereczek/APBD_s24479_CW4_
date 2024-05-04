@@ -2,11 +2,9 @@ namespace WebApplication1;
 
 public class Warehouse
 {
-    public DateTime Date { get; set; }
+    public int ProductId { get; set; }
+    public int WarehouseId { get; set; }
+    public int Amount { get; set; }
+    public DateTime CreatedDateTime { get { return DateTime.Now; } }
 
-    public int TemperatureC { get; set; }
-
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-
-    public string? Summary { get; set; }
 }

@@ -1,5 +1,7 @@
 
 using WebApplication1.Repository;
+using WebApplication1.Service;
+using WebApplication1.Services;
 
 class Program
 {
@@ -12,7 +14,8 @@ class Program
         builder.Services.AddEndpointsApiExplorer(); //bibiloteki automat generuja dok.do.api
         builder.Services.AddSwaggerGen(); //wizualna dokumentacja openAPI - dok.apk.webowych
         builder.Services.AddControllers();
-        builder.Services.AddScoped<IWarehouseRepository, WarehouseRepository>();//nowy serwis rejestracja w konter IoC
+        builder.Services.AddScoped<IWarehouseRepository, WarehouseRepository>(); //nowy serwis rejestracja w konter IoC
+        builder.Services.AddScoped<IWarehouseService, WarehouseService>();
 
         var app = builder.Build();
 
