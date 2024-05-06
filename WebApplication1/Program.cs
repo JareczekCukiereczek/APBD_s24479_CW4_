@@ -9,8 +9,7 @@ class Program
     {
         var builder = WebApplication.CreateBuilder(args); //wzorzed buidler
 
-        // Add services to the container.
-        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+        
         builder.Services.AddEndpointsApiExplorer(); //bibiloteki automat generuja dok.do.api
         builder.Services.AddSwaggerGen(); //wizualna dokumentacja openAPI - dok.apk.webowych
         builder.Services.AddControllers();

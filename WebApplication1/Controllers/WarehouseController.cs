@@ -19,24 +19,22 @@ public class WarehouseController : ControllerBase
         _warehouseService = warehouseService;
     }
 
-    [HttpPost("AddNewProduct")]
-    public async Task<IActionResult> AddNewProduct(Warehouse warehouse)
+    [HttpPost("AddProduct")]
+    public async Task<IActionResult> AddProduct(Warehouse warehouse)
     {
-
-        //walidacja czy ilość przekazana w żądaniu jest większa od 0
 
         if (warehouse.Amount <= 0 )
         {
-            return BadRequest("Amount musi być większe od zera");
+            return BadRequest("Amount should be higher than 0");
         }
 
-        string result = await _warehouseService.AddNewProductQuery(warehouse);
+        string result = await _warehouseService.AddProduct(warehouse);
 
         return Ok(result);
     }
 
-    [HttpPost("AddNewProductByProcedure")]
-    public async Task<IActionResult> AddNewProductByProcedure(Warehouse warehouse)
+    [HttpPost("AddByProc")]
+    public async Task<IActionResult> AddByProc(Warehouse warehouse)
     {
         string result = await _warehouseService.AddNewProductByProcedure(warehouse);
 
